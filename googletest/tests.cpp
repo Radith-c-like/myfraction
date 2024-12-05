@@ -137,3 +137,28 @@ TEST(testfraction, testpluschange) {
     left += right += right;
     EXPECT_EQ(left.toString(), "3/1");
 }
+
+TEST(testfraction, testpostfixincrement) {
+    RationalNumber<int> left{1,1};
+    RationalNumber<int> right{1,1};
+    right += left++;
+    EXPECT_EQ(left.toString(), "2/1");
+    EXPECT_EQ(right.toString(), "2/1");
+}
+
+
+TEST(testfraction, testorefixincrement) {
+    RationalNumber<int> left{1,1};
+    RationalNumber<int> right{1,1};
+    right += ++left;
+    EXPECT_EQ(left.toString(), "2/1");
+    EXPECT_EQ(right.toString(), "3/1");
+}
+
+TEST(testfraction, testEqual) {
+    RationalNumber<int> left{1,1};
+    RationalNumber<int> right{1,1};
+    EXPECT_TRUE(left == right);
+    ++right;
+    EXPECT_FALSE(right == left);
+}

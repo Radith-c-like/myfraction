@@ -30,21 +30,21 @@ public:
   RationalNumber operator - (const RationalNumber &other)const;
   RationalNumber operator * (const RationalNumber &other)const;
   RationalNumber operator / (const RationalNumber &other)const;
-  RationalNumber& operator += (const RationalNumber &other); //TODO test it
-  RationalNumber& operator -= (const RationalNumber &other); //TODO test it
-  RationalNumber& operator *= (const RationalNumber &other); //TODO test it
-  RationalNumber& operator /= (const RationalNumber &other); //TODO test it
-  bool operator == (const RationalNumber &other)const; //TODO test it
-  bool operator != (const RationalNumber &other)const; //TODO test it
-  bool operator < (const RationalNumber &other)const; //TODO test it
-  bool operator > (const RationalNumber &other)const; //TODO test it
-  bool operator <= (const RationalNumber &other)const; //TODO test it
-  bool operator >= (const RationalNumber &other)const; //TODO test it
-  RationalNumber& operator = (const RationalNumber &other); //TODO test it
-  RationalNumber& operator ++ (); //TODO test it
-  RationalNumber operator ++ (int); //TODO test it
-  RationalNumber& operator -- (); //TODO test it
-  RationalNumber operator -- (int); //TODO test it
+  RationalNumber& operator += (const RationalNumber &other);
+  RationalNumber& operator -= (const RationalNumber &other);
+  RationalNumber& operator *= (const RationalNumber &other);
+  RationalNumber& operator /= (const RationalNumber &other);
+  bool operator == (const RationalNumber &other)const;
+  bool operator != (const RationalNumber &other)const;
+  bool operator < (const RationalNumber &other)const;
+  bool operator > (const RationalNumber &other)const;
+  bool operator <= (const RationalNumber &other)const;
+  bool operator >= (const RationalNumber &other)const;
+  RationalNumber& operator = (const RationalNumber &other);
+  RationalNumber& operator ++ ();
+  RationalNumber operator ++ (int);
+  RationalNumber& operator -- ();
+  RationalNumber operator -- (int);
   std::string toString() const;
 
   template<class T1>
